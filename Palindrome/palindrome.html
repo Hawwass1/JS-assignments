@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+function Palindrome( str )
+  {
+    let j = str.length -1;
+    for( let i = 0 ; i < j/2 ;i++)
+    {
+      let x = str[i] ;
+      let y = str[j-i];
+        if( x != y)
+      {
+        return false;
+      }
+    }
+    return true;
+     
+  }
+  function Word( str )
+  {
+    // variable that is true if string is palindrome
+    let answer = Palindrome(str);
+    if( answer == true )
+    {
+      console.log("It is a palindrome ");
+    }
+    else
+    {
+      console.log("It is not a palindrome");
+    }
+  }
+  // test variable
+  let test = "Javascript";
+  Word(test);
+    </script>
+</body>
+</html>
